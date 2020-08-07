@@ -12,10 +12,10 @@ Membre du **groupe 5:**
 ```
 Notre comporte un fichier **game.rb** qui se trouve dans le dossier **lib**.
 Dans ce fichier, il y a **4 classes** dont
-> **Board:** définit le plateau et les combinaisons gagnantes avec victoire.
-> **Boardcase** definit les cases de la tableau.
-> **Player** definit les noms des joueurs et sa couleur.
-> **Game** le morpion avec la classe Game qui retrace les étapes du jeu, les tours jusqu'à la fin du jeu, qui peut aboutir à une victoire ou une égalité.
+> **Board:** définit le plateau et les combinaisons gagnantes avec victoire.<br>
+> **Boardcase** definit les cases de la tableau.<br>
+> **Player** definit les noms des joueurs et sa couleur.<br>
+> **Game** le morpion avec la classe Game qui retrace les étapes du jeu, les tours jusqu'à la fin du jeu, qui peut aboutir à une victoire ou une égalité.<br>
 
 ## Fonctionnalite du programme
 Pour lancer le jue, il faut ouvrir la terminal dans le dossier lib du projet. Ensuite, tapez la commande **ruby game.rb** et fait entrer.
