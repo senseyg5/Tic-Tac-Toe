@@ -2,18 +2,19 @@
 
 Membre du **groupe 5:**
 
+```mermaid
 > 1- Freddy Harimanana                  |   https://github.com/Freddy-Harimanana 
 > 2- Lafatra L Ramahefaharimamonjy      |   https://github.com/Lafatra351
 > 3- Toky Raf                           |
 > 4- Toiher Omar                        |
 > 5- Randy rajaonarison                 |   
 > 6- Freddy Michel                      |   https://github.com/freddymi1
-
+```
 Notre comporte un fichier **game.rb** qui se trouve dans le dossier **lib**.
 Dans ce fichier, il y a **4 classes** dont
-> **Board:** définit le plateau et les combinaisons gagnantes avec victoire
-> **Boardcase** definit les cases de la tableau
-> **Player** definit les noms des joueurs et sa couleur
+> **Board:** définit le plateau et les combinaisons gagnantes avec victoire.
+> **Boardcase** definit les cases de la tableau.
+> **Player** definit les noms des joueurs et sa couleur.
 > **Game** le morpion avec la classe Game qui retrace les étapes du jeu, les tours jusqu'à la fin du jeu, qui peut aboutir à une victoire ou une égalité.
 
 ## Fonctionnalite du programme
