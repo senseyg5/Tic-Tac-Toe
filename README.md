@@ -3,12 +3,12 @@
 Membre du **groupe 5:**
 
 ```mermaid
-> 1- Freddy Harimanana                  |   https://github.com/Freddy-Harimanana 
-> 2- Lafatra L Ramahefaharimamonjy      |   https://github.com/Lafatra351
-> 3- Toky Raf                           |
-> 4- Toiher Omar                        |
-> 5- Randy rajaonarison                 |   
-> 6- Freddy Michel                      |   https://github.com/freddymi1
+1- Freddy Harimanana                  |   https://github.com/Freddy-Harimanana 
+2- Lafatra L Ramahefaharimamonjy      |   https://github.com/Lafatra351
+3- Toky Raf                           |
+4- Toiher Omar                        |
+5- Randy rajaonarison                 |   
+6- Freddy Michel                      |   https://github.com/freddymi1
 ```
 Notre comporte un fichier **game.rb** qui se trouve dans le dossier **lib**.
 Dans ce fichier, il y a **4 classes** dont
