@@ -48,7 +48,7 @@ Sinon, si le match est a egalite, le programme affichera une message
 
 > ***Woz, egalite***
 
-Et a la fin de chaque partie, le programme demande au utilisateur s'il veut rejouer ou quiter le jeur en affichant une message
+Et a la fin de chaque partie, le programme demande au utilisateur s'il veut rejouer ou quiter le jeur en affichant une message:
 
 > ***Voulez vous rejouer encore? [O/n]:***
 
@@ -56,11 +56,12 @@ Si la reponse est **o** ou **O**
 Le programme relance le jeu depuis le debut
 
 Si la reponse est **n** ou **N**
-Le programme quitera le jeu en envoyant une message
+Le programme quitera le jeu en envoyant une message:
 
 > ***Fin de la partie! Bye...***
 
-Ou si l'utilisateur appuis sur les autres touches, le programme renvoie le message
+Ou si l'utilisateur appuis sur les autres touches, le programme renvoie le message:
 
 > ***Annulation...***
-Et le boucle sortira du programme
+
+Et le boucle sortira du programme.
