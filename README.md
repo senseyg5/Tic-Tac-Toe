@@ -7,7 +7,7 @@ Membre du **groupe 5:**
 2- Lafatra L Ramahefaharimamonjy      |   https://github.com/Lafatra351
 3- Toky Raf                           |   https://github.com/toky007
 4- Toiher Omar                        |   https://github.com/omar-4
-5- Randy rajaonarison                 |   
+5- Randy rajaonarison                 |   https://github.com/Randyraja
 6- Freddy Michel                      |   https://github.com/freddymi1
 ```
 Notre comporte un fichier **game.rb** qui se trouve dans le dossier **lib**.
