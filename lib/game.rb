@@ -146,7 +146,7 @@ class Game
     self.turn #fais appelle à la classe dans la classe. Donc ici appelle la classe pour exécuter turn donc le jeu
     #puts "Demarrez maintenant! Appuier sur entrer \n"
     #gets.chomp #Faire entrée pour effectivement enchaîner sur le jeu
-    @continue = true
+    
   end
 
   def turn
@@ -175,7 +175,7 @@ class Game
           @info_player = [player.name, player.player_color, n] #enregistre les infos données au cours de la partie
           @grid_board.play(@info_player)
           
-          while @grid_board.victoire #Les conditions de victoire sont remplies alors on applique deux cas de figure (win / égalité)
+          if @grid_board.victoire #Les conditions de victoire sont remplies alors on applique deux cas de figure (win / égalité)
             partie += 1
             @grid_board.display_board # affiche le plateau gagnant
             puts "===============================".yellow
@@ -185,11 +185,8 @@ class Game
             print "Voulez vous rejouer encore? [O/n]: " #rejouer à une autre partie
             rep = gets.chomp #On demande le oui ou le non
             if rep == "O" || rep == "o" #Si la réponse est oui (O) ou (o)
-              @continue == true
               Game.new.go #On relance le jeu avec le Game.new.go
-              
             elsif rep == "N" || rep == "n" #Si la réponse est non (N) ou (n)
-              @continue == false
               puts "Fin de la partie! Bye..." #C'es fini!
             else
               puts "Annulation....."
@@ -203,20 +200,16 @@ class Game
           turns += 1 # On incrémente le turns pour atteindre 9
           
         
-          while turns == 9 # Les conditions de victoire n'ont pas été remplies mais on a fini de remplir le plateau, c'est l'égalité
+          if turns == 9 # Les conditions de victoire n'ont pas été remplies mais on a fini de remplir le plateau, c'est l'égalité
             @grid_board.display_board #Affiche le plateau de l'égalité
             puts "==========================".yellow
             puts " ===== Wow, égalité ===== "
             puts "==========================".yellow
-            puts "===== FIN DE LA PARTIE NUMERO #{partie += 1} =====".cyan
-            print "Voulez vous rejouer encore? [O/n]: "
-            rep = gets.chomp #idem qu'avant
+            print "Voulez vous rejouer encore? [O/n]: " #rejouer à une autre partie
+            rep = gets.chomp #On demande le oui ou le non
             if rep == "O" || rep == "o"
-              @continue == true
               Game.new.go
-              partie += 1
             elsif rep == "N" || rep == "n"
-              @continue == false
               puts "Fin de la partie! Bye..."
               exit
             else
@@ -230,7 +223,6 @@ class Game
       end #Fin de la boucle while avec l'atteinte de la condition de victoire en true
       
     
-      partie += 1
   end #fin de turn
 
 end
