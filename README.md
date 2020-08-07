@@ -65,3 +65,8 @@ Ou si l'utilisateur appuis sur les autres touches, le programme renvoie le messa
 > ***Annulation...***
 
 Et le boucle sortira du programme.
+
+
+Amelioration a faire
+
+> Ajout de compteur de partie

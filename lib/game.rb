@@ -16,6 +16,7 @@ puts "\t\t\t\t X | O  | X ".cyan
 puts "\n"
 #Debut du Board class
 class Board
+  
   attr_accessor :board
 
   def initialize #Les neufs cases avec les valeurs 1 à 9 pour éviter de taper 0 comme dans l'array
@@ -84,6 +85,7 @@ end
 
 # Debut du classe Boardcases :
 class BoardCase
+  #system 'clear'
   #la classe a deux attr_accessor : sa valeur ("X", "_", ou vide), et son numéro de case.
   attr_accessor :value, :case_number
   
@@ -113,6 +115,8 @@ end
 
 
 class Game
+  
+  
   def initialize
     print "Entrer le nom du joueur nimero 1: "
     nom_player_1 = gets.chomp
@@ -135,75 +139,98 @@ class Game
   end
 
   def go #Les règles du jeu pour faire joli
+    
     puts
     puts "Aide...."
     puts "Entrer de chiffre 0-9 qui correspond au X et O dans la case"
     self.turn #fais appelle à la classe dans la classe. Donc ici appelle la classe pour exécuter turn donc le jeu
     #puts "Demarrez maintenant! Appuier sur entrer \n"
     #gets.chomp #Faire entrée pour effectivement enchaîner sur le jeu
+    @continue = true
   end
 
   def turn
+    
+    partie = 1
     turns = 0 #Le turns commence à 0, on ajoute +1 après jusqu'à ce qu'un des deux joueurs gagne.
-
-    while @grid_board.victoire == false do #On fait tout ce qu'il y a en dessous, tant que victoire n'est pas atteint
-      @players.each { |player| #Il ne faut pas oublier d'appeler l'array des joueurs pour cela et de leur appliquer les lignes suivantes
-        @grid_board.display_board #Affichage du plateau
-        tour = turns + 1
-        puts "***** TOUR NUMERO #{tour} *****".yellow #La structure chaque tour
-
-        print "#{player.name.capitalize.blue} ! Choisis ta case: "   #On appliquer le .name de la classe Player au player(les deux qu'on a lié juste avant.)
-        n = gets.chomp.to_i   #On enregistre la case dans la variable n cad dans les infos du player
-        puts "\n"
-        if n < 0 && n > 10 && n.integer? == false  #Evite qu'on entre un numéro autre que les chiffres de 1 à 9, sinon ça demande de renseigner un bon numéro (se répète grâce à until)
-          puts "Veuillez entrer un numero entre [0 - 9] :"
-          n = gets.chomp.to_i
-        end
-        n = n - 1 #On retire 1 pour que ça corresponde à l'index (sans ça on commence à 0 et pas à 1)
-
-        @info_player = [player.name, player.player_color, n] #enregistre les infos données au cours de la partie
-        @grid_board.play(@info_player)
-
-        if @grid_board.victoire #Les conditions de victoire sont remplies alors on applique deux cas de figure (win / égalité)
-          @grid_board.display_board # affiche le plateau gagnant
-          puts "===============================".yellow
-          puts "  =========> Felicitation! #{player.name.upcase.cyan}, tu as gagné la partie!"
-          puts "===============================".yellow
-          print "Voulez vous rejouer encore? [O/n]: " #rejouer à une autre partie
-          rep = gets.chomp #On demande le oui ou le non
-          if rep == "O" || rep == "o" #Si la réponse est oui (O) ou (o)
-            Game.new.go #On relance le jeu avec le Game.new.go
-          elsif rep == "N" || rep == "n" #Si la réponse est non (N) ou (n)
-            puts "Fin de la partie! Bye..." #C'es fini!
-          else
-            puts "Annulation....."
-            exit
+    
+      puts "===== PARTIE NUMERO #{partie} =====".cyan
+      while @grid_board.victoire == false do #On fait tout ce qu'il y a en dessous, tant que victoire n'est pas atteint
+        
+        @players.each { |player| #Il ne faut pas oublier d'appeler l'array des joueurs pour cela et de leur appliquer les lignes suivantes
+          @grid_board.display_board #Affichage du plateau
+          tour = turns + 1
+          
+          puts "***** TOUR NUMERO #{tour} *****".yellow #La structure chaque tour
+          
+          print "#{player.name.capitalize.blue} ! Choisis ta case: "   #On appliquer le .name de la classe Player au player(les deux qu'on a lié juste avant.)
+          n = gets.chomp.to_i   #On enregistre la case dans la variable n cad dans les infos du player
+          puts "\n"
+          if n < 0 && n > 10 && n.integer? == false  #Evite qu'on entre un numéro autre que les chiffres de 1 à 9, sinon ça demande de renseigner un bon numéro (se répète grâce à until)
+            puts "Veuillez entrer un numero entre [0 - 9] :"
+            n = gets.chomp.to_i
           end
-          break # on sort de la boucle si c'est le joueur a gagné.
-        end
+          n = n - 1 #On retire 1 pour que ça corresponde à l'index (sans ça on commence à 0 et pas à 1)
 
-        turns += 1 # On incrémente le turns pour atteindre 9
-
-        while turns == 9 # Les conditions de victoire n'ont pas été remplies mais on a fini de remplir le plateau, c'est l'égalité
-        @grid_board.display_board #Affiche le plateau de l'égalité
-        puts "==========================".yellow
-        puts " ===== Wow, égalité ===== "
-        puts "==========================".yellow
-        print "Voulez vous rejouer encore? [O/n]: "
-          rep = gets.chomp #idem qu'avant
-          if rep == "O" || rep == "o"
-            Game.new.go
-          elsif rep == "N" || rep == "n"
-            puts "Fin de la partie! Bye..."
-            exit
-          else
-            puts "Annulation....."
-            exit
+          @info_player = [player.name, player.player_color, n] #enregistre les infos données au cours de la partie
+          @grid_board.play(@info_player)
+          
+          while @grid_board.victoire #Les conditions de victoire sont remplies alors on applique deux cas de figure (win / égalité)
+            partie += 1
+            @grid_board.display_board # affiche le plateau gagnant
+            puts "===============================".yellow
+            puts "  =========> Felicitation! #{player.name.upcase.cyan}, tu as gagné la partie!"
+            puts "===============================".yellow
+            
+            print "Voulez vous rejouer encore? [O/n]: " #rejouer à une autre partie
+            rep = gets.chomp #On demande le oui ou le non
+            if rep == "O" || rep == "o" #Si la réponse est oui (O) ou (o)
+              @continue == true
+              Game.new.go #On relance le jeu avec le Game.new.go
+              
+            elsif rep == "N" || rep == "n" #Si la réponse est non (N) ou (n)
+              @continue == false
+              puts "Fin de la partie! Bye..." #C'es fini!
+            else
+              puts "Annulation....."
+              exit
+            end
+            break # on sort de la boucle si c'est le joueur a gagné.
+            
+            
           end
-        break
-      end
-    } #fin des lignes à appliquer à chacun des joueurs inclus dans l'array players
-    end #Fin de la boucle while avec l'atteinte de la condition de victoire en true
+          
+          turns += 1 # On incrémente le turns pour atteindre 9
+          
+        
+          while turns == 9 # Les conditions de victoire n'ont pas été remplies mais on a fini de remplir le plateau, c'est l'égalité
+            @grid_board.display_board #Affiche le plateau de l'égalité
+            puts "==========================".yellow
+            puts " ===== Wow, égalité ===== "
+            puts "==========================".yellow
+            puts "===== FIN DE LA PARTIE NUMERO #{partie += 1} =====".cyan
+            print "Voulez vous rejouer encore? [O/n]: "
+            rep = gets.chomp #idem qu'avant
+            if rep == "O" || rep == "o"
+              @continue == true
+              Game.new.go
+              partie += 1
+            elsif rep == "N" || rep == "n"
+              @continue == false
+              puts "Fin de la partie! Bye..."
+              exit
+            else
+              puts "Annulation....."
+              exit
+            end
+          break
+          
+        end
+      } #fin des lignes à appliquer à chacun des joueurs inclus dans l'array players
+      end #Fin de la boucle while avec l'atteinte de la condition de victoire en true
+      
+    
+      partie += 1
   end #fin de turn
 
 end
