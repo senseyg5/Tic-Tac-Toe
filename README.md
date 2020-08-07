@@ -1,4 +1,4 @@
-**Projet developpement du jeu <b>TIC TAC TOE </b> en <strong>RUBY</strong>**
+**Projet developpement du jeu <b>TIC TAC TOE </b> en <strong>RUBY</strong>**b<br>
 Membre du **groupe 5:**
 ```mermaid
 > 1- Freddy Harimanana                  |   https://github.com/Freddy-Harimanana 
@@ -22,7 +22,7 @@ Quand les noms des joueurs sont bien rentrer, la partie commence avec la **tour 
 Pour jour, les 2 joueurs choisissent un nombre entre **1 a 9**
 Si l'un parmis les 2 joueurs gagne la partie, le programme affichera une message
 
-> ***=========> Felicitation! **#{player.name.upcase.cyan}**, tu as gagné la partie!"***
+> ***Felicitation! **#{player.name.upcase.cyan}**, tu as gagné la partie!"***
 
 Sinon, si le match est a egalite, le programme affichera une message
 
