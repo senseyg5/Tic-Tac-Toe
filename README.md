@@ -19,8 +19,26 @@ Dans ce fichier, il y a **4 classes** dont
 
 ## Fonctionnalite du programme
 Pour lancer le jue, il faut ouvrir la terminal dans le dossier lib du projet. Ensuite, tapez la commande **ruby game.rb** et fait entrer.
-Au premierem il demande le **nom** des 2 joueurs et en leurs donnants le symbole **X** et **O**.
+En commencant, il demande le **nom** des 2 joueurs et en leurs donnants le symbole **X** pour le joueur numero 1 et **O** pour le joueur numero 2.
 Quand les noms des joueurs sont bien rentrer, la partie commence avec la **tour numero 1** jusque a la **tour numero 9**.
+
+## Regle du jeu
+Il y a un gagnant si l'un parmis des ces conditions sont vraie ou la combinaison des ces chiffres dans le tableau sont vraie:
+
+**Condition Gagnant**
+
+> case_1 = @board[0] == @board[1] && @board[0] == @board[2] &&  @board[0] != "1" && @board[1] != "2" && @board[2] != "3" ***#victoire à l'horizontal***
+> case_2 = @board[3] == @board[4] && @board[3] == @board[5] && @board[3] != "4" && @board[4] != "5" && @board[5] != "6" ***#victoire à l'horizontal***
+> case_3 = @board[6] == @board[7] && @board[6] == @board[8] && @board[6] != "7" && @board[7] != "8" && @board[8] != "9" ***#victoire à l'horizontal***
+> case_4 = @board[0] == @board[3] && @board[0] == @board[6] && @board[0] != "1" && @board[3] != "4" && @board[6] != "7" ***#victoire à la verticale***
+> case_5 = @board[2] == @board[5] && @board[2] == @board[8] && @board[2] != "3" && @board[5] != "6" && @board[8] != "9" ***#victoire à la verticale***
+> case_6 = @board[0] == @board[4] && @board[0] == @board[8] && @board[0] != "1" && @board[4] != "5" && @board[8] != "9" ***#victoire à la verticale***
+> case_7 = @board[2] == @board[4] && @board[2] == @board[6] && @board[2] != "3" && @board[4] != "5" && @board[6] != "7" ***#victoire en diagonale***
+> case_8 = @board[1] == @board[4] && @board[1] == @board[7] && @board[1] != "2" && @board[4] != "5" && @board[7] != "8" ***#victoire en diagonale***
+
+**Condition match null**
+> Si le score n'est pas parmis ces condition, alors, il n'y a pas de gagnant, donc, match null.
+
 Pour jour, les 2 joueurs choisissent un nombre entre **1 a 9**
 Si l'un parmis les 2 joueurs gagne la partie, le programme affichera une message
 
