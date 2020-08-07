@@ -6,7 +6,7 @@ Membre du **groupe 5:**
 1- Freddy Harimanana                  |   https://github.com/Freddy-Harimanana 
 2- Lafatra L Ramahefaharimamonjy      |   https://github.com/Lafatra351
 3- Toky Raf                           |
-4- Toiher Omar                        |
+4- Toiher Omar                        |   https://github.com/omar-4
 5- Randy rajaonarison                 |   
 6- Freddy Michel                      |   https://github.com/freddymi1
 ```
@@ -26,7 +26,7 @@ Quand les noms des joueurs sont bien rentrer, la partie commence avec la **tour 
 Il y a un gagnant si l'un parmis des ces conditions sont vraie ou la combinaison des ces chiffres dans le tableau sont vraie:
 
 **Condition Gagnant**
-
+```mermaid
 > 1- case_1 = @board[0] == @board[1] && @board[0] == @board[2] &&  @board[0] != "1" && @board[1] != "2" && @board[2] != "3" ***#victoire à l'horizontal***<br>
 > 2- case_2 = @board[3] == @board[4] && @board[3] == @board[5] && @board[3] != "4" && @board[4] != "5" && @board[5] != "6" ***#victoire à l'horizontal***<br>
 > 3- case_3 = @board[6] == @board[7] && @board[6] == @board[8] && @board[6] != "7" && @board[7] != "8" && @board[8] != "9" ***#victoire à l'horizontal***<br>
@@ -35,7 +35,7 @@ Il y a un gagnant si l'un parmis des ces conditions sont vraie ou la combinaison
 > 6- case_6 = @board[0] == @board[4] && @board[0] == @board[8] && @board[0] != "1" && @board[4] != "5" && @board[8] != "9" ***#victoire à la verticale***<br>
 > 7- case_7 = @board[2] == @board[4] && @board[2] == @board[6] && @board[2] != "3" && @board[4] != "5" && @board[6] != "7" ***#victoire en diagonale***<br>
 > 8- case_8 = @board[1] == @board[4] && @board[1] == @board[7] && @board[1] != "2" && @board[4] != "5" && @board[7] != "8" ***#victoire en diagonale***<br>
-
+```
 **Condition match null**
 > Si le score n'est pas parmis ces condition, alors, il n'y a pas de gagnant, donc, match null.
 
