@@ -17,8 +17,8 @@ Dans ce fichier, il y a **4 classes** dont
 > **Player** definit les noms des joueurs et sa couleur.<br>
 > **Game** le morpion avec la classe Game qui retrace les étapes du jeu, les tours jusqu'à la fin du jeu, qui peut aboutir à une victoire ou une égalité.<br>
 
-## Fonctionnalite du programme
-Pour lancer le jue, il faut ouvrir la terminal dans le dossier lib du projet. Ensuite, tapez la commande **ruby game.rb** et fait entrer.
+## Fonctionnalité du programme
+Pour lancer le jeu, il faut ouvrir le terminal dans le dossier lib du projet. Ensuite, tapez la commande **ruby game.rb** et fait entrer.
 En commencant, il demande le **nom** des 2 joueurs et en leurs donnants le symbole **X** pour le joueur numero 1 et **O** pour le joueur numero 2.
 Quand les noms des joueurs sont bien rentrer, la partie commence avec la **tour numero 1** jusque a la **tour numero 9**.
 
@@ -59,3 +59,8 @@ Si la reponse est **n** ou **N**
 Le programme quitera le jeu en envoyant une message
 
 > ***Fin de la partie! Bye...***
+
+Ou si l'utilisateur appuis sur les autres touches, le programme renvoie le message
+
+> ***Annulation...***
+Et le boucle sortira du programme
