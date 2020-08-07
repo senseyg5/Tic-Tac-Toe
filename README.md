@@ -1,12 +1,18 @@
 **Projet developpement du jeu <b>TIC TAC TOE </b> en <strong>RUBY</strong>**b<br>
 Membre du **groupe 5:**
 ```mermaid
-> 1- Freddy Harimanana                  |   https://github.com/Freddy-Harimanana 
-> 2- Lafatra L Ramahefaharimamonjy      |   https://github.com/Lafatra351
+Nom->>
+> 1- Freddy Harimanana                  |    
+> 2- Lafatra L Ramahefaharimamonjy      |   
 > 3- Toky Raf                           |
 > 4- Toiher Omar                        |
 > 5- Randy rajaonarison                 |   
-> 6- Freddy Michel                      |   https://github.com/freddymi1
+> 6- Freddy Michel                      |   
+
+Lien github -->>
+https://github.com/Freddy-Harimanana
+https://github.com/Lafatra351
+https://github.com/freddymi1
 ```
 Notre comporte un fichier **game.rb** qui se trouve dans le dossier **lib**.
 Dans ce fichier, il y a **4 classes** dont
