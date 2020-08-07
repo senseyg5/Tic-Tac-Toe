@@ -27,7 +27,7 @@ Il y a un gagnant si l'un parmis des ces conditions sont vraie ou la combinaison
 
 **Condition Gagnant**
 ```mermaid
-1- case_1 = @board[0] == @board[1] && @board[0] == @board[2] &&  @board[0] != "1" && @board[1] != "2" && @board[2] != "3" ***#victoire à l'horizontal***
+1- case_1 = @board[0] == @board[1] && @board[0] == @board[2] && @board[0] != "1" && @board[1] != "2" && @board[2] != "3" ***#victoire à l'horizontal***
 2- case_2 = @board[3] == @board[4] && @board[3] == @board[5] && @board[3] != "4" && @board[4] != "5" && @board[5] != "6" ***#victoire à l'horizontal***
 3- case_3 = @board[6] == @board[7] && @board[6] == @board[8] && @board[6] != "7" && @board[7] != "8" && @board[8] != "9" ***#victoire à l'horizontal***
 4- case_4 = @board[0] == @board[3] && @board[0] == @board[6] && @board[0] != "1" && @board[3] != "4" && @board[6] != "7" ***#victoire à la verticale***
